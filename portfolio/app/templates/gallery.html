@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="gallery-section-modern">
+    <div class="gallery-categories-modern">
+        <button class="category-btn-modern active" data-category="all">All</button>
+        <button class="category-btn-modern" data-category="achievements">Achievements</button>
+        <button class="category-btn-modern" data-category="certificates">Certificates</button>
+    </div>
+    <div class="gallery-grid-modern">
+        <!-- Placeholder images, replace src with your own later -->
+        <div class="gallery-card" data-category="achievements">
+            <img src="{{ url_for('static', filename='images/achievement1.jpg') }}" alt="Achievement 1">
+            <div class="gallery-card-info">
+                <span class="gallery-card-title">Achievement 1</span>
+                <span class="gallery-card-category">Achievement</span>
+            </div>
+        </div>
+        <div class="gallery-card" data-category="achievements">
+            <img src="{{ url_for('static', filename='images/achievement2.jpg') }}" alt="Achievement 2">
+            <div class="gallery-card-info">
+                <span class="gallery-card-title">Achievement 2</span>
+                <span class="gallery-card-category">Achievement</span>
+            </div>
+        </div>
+        <div class="gallery-card" data-category="certificates">
+            <img src="{{ url_for('static', filename='images/certificate1.jpg') }}" alt="Certificate 1">
+            <div class="gallery-card-info">
+                <span class="gallery-card-title">Certificate 1</span>
+                <span class="gallery-card-category">Certificate</span>
+            </div>
+        </div>
+        <div class="gallery-card" data-category="certificates">
+            <img src="{{ url_for('static', filename='images/certificate2.jpg') }}" alt="Certificate 2">
+            <div class="gallery-card-info">
+                <span class="gallery-card-title">Certificate 2</span>
+                <span class="gallery-card-category">Certificate</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

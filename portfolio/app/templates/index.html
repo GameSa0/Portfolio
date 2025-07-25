@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <span class="hero-greeting-badge">Hey, I'm Ian <span class="wave-hand">👋</span></span>
+            <h1 class="hero-title">A <span class="highlight">Computer Programmer & UI/UX<br>Designer</span></h1>
+            <p class="hero-desc">I enjoy making websites and apps that are simple, creative, and easy to use.</p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn-primary">See My Work</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/cesar.jpg') }}" alt="Profile" class="profile-img" id="profile-img-modal-trigger">
+        </div>
+    </div>
+    <div class="hero-features">
+
+<!-- Circular Profile Modal -->
+<div id="profile-modal" class="profile-modal-overlay">
+    <div class="profile-modal-content">
+        <span class="profile-modal-close">&times;</span>
+        <img src="{{ url_for('static', filename='images/cesar.jpg') }}" alt="Profile" class="profile-modal-img">
+        <div class="profile-modal-caption">Cesar Ian C. Apatino</div>
+    </div>
+</div>
+
+        <div class="feature-card">Web Design</div>
+        <div class="feature-card">Responsive & Modern UI</div>
+        <div class="feature-card">Custom Prototyping</div>
+    </div>
+</section>
+<section class="about-section">
+    <div class="about-text">
+        <h2>Learning, Creating, and Sharing My Journey in Programming & Design</h2>
+        <h3 class="about-subheading">Simple Solutions, Creative Results</h3>
+        <p>Hey, I'm Ian. I'm a person who loves programming and designing websites and apps. I enjoy making things that look nice and are easy for people to use.<br><br>I like learning new things and working on projects that help me get better. If you want to work together or see what I can do, check out my portfolio below!</p>
+    </div>
+</section>
+<section id="portfolio" class="portfolio-section">
+    <div class="portfolio-scroll-section">
+        <h2 class="portfolio-scroll-title">Certificates</h2>
+        <div class="portfolio-horizontal-scroll">
+            <div class="badge-card">
+                <span class="badge-icon">🏅</span>
+                <img src="{{ url_for('static', filename='certificate/cybersecurity.jpg') }}" alt="Certificate 1" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/cybersecurity.jpg') }}" data-title="Certificate 1" data-desc="Brief description for Certificate 1.">
+                <span class="badge-label">Cybersecurity</span>
+            </div>
+            <div class="badge-card">
+                <span class="badge-icon">🏅</span>
+                <img src="{{ url_for('static', filename='certificate/engtech.jpg') }}" alt="On Job Training (OJT)" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/engtech.jpg') }}" data-title="On Job Training (OJT)" data-desc="Brief description for Certificate 2.">
+                <span class="badge-label">On Job Training (OJT)</span>
+            </div>
+            <div class="badge-card">
+                <span class="badge-icon">🏅</span>
+                <img src="{{ url_for('static', filename='certificate/leadership.jpg') }}" alt="Leadership Training Seminar" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/leadership.jpg') }}" data-title="Leadership Training Seminar" data-desc="Brief description for Certificate 2.">
+                <span class="badge-label">Leadership Training Seminar</span>
+            </div>
+            <div class="badge-card">
+                <span class="badge-icon">🏅</span>
+                <img src="{{ url_for('static', filename='certificate/research.jpg') }}" alt="Research Project" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/research.jpg') }}" data-title="Research Project" data-desc="Brief description for Certificate 2.">
+                <span class="badge-label">Student Research Capability Training and Workshop</span>
+            </div>
+        </div>
+        <!-- <h3 class="portfolio-scroll-title">Achievements</h3>
+        <div class="portfolio-horizontal-scroll">
+            <div class="badge-card">
+                <span class="badge-icon">🎖️</span>
+                <img src="{{ url_for('static', filename='images/achievement1.jpg') }}" alt="Achievement 1" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/achievement1.jpg') }}" data-title="Achievement 1" data-desc="Brief description for Achievement 1.">
+                <span class="badge-label">Achievement 1</span>
+            </div>
+            <div class="badge-card">
+                <span class="badge-icon">🎖️</span>
+                <img src="{{ url_for('static', filename='images/achievement2.jpg') }}" alt="Achievement 2" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/achievement2.jpg') }}" data-title="Achievement 2" data-desc="Brief description for Achievement 2.">
+                <span class="badge-label">Achievement 2</span>
+            </div>
+        </div> -->
+    </div>
+    <!-- Modal for image click -->
+    <div id="img-modal" class="modal-overlay modal-celebrate">
+        <div class="modal-content img-modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="img-modal-src" src="" alt="" class="img-modal-img">
+            <h3 id="img-modal-title"></h3>
+            <p id="img-modal-desc"></p>
+        </div>
+    </div>
+</section>
+
+<!-- Sample Works Section -->
+<section class="works-section">
+    <div class="blob1"></div><div class="blob2"></div>
+    <h2>Sample Works</h2>
+    <!-- Unique Moving Carousel for Sample Works -->
+      <div class="works-carousel">
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/1.jpg') }}" alt="Work 1" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/1.jpg') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/2.jpg') }}" alt="Work 2" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/2.jpg') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/3.png') }}" alt="Work 3" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/3.png') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/11.png') }}" alt="Work 4" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/11.png') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/gt.png') }}" alt="Work 5" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/gt.png') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/bancasi.png') }}" alt="Work 6" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/bancasi.png') }}"></div>
+        <!-- Repeat for seamless loop -->
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/1.jpg') }}" alt="Work 1" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/1.jpg') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/2.jpg') }}" alt="Work 2" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/2.jpg') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/3.png') }}" alt="Work 3" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/3.png') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/11.png') }}" alt="Work 4" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/11.png') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/gt.png') }}" alt="Work 5" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/gt.png') }}"></div>
+        <div class="carousel-img-frame"><img src="{{ url_for('static', filename='images/bancasi.png') }}" alt="Work 6" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/bancasi.png') }}"></div>
+      </div>
+    <br>
+    <br>
+    <br>
+    <!-- <div class="works-gallery">
+        <div class="work-card">
+            <img src="{{ url_for('static', filename='images/sample1.jpg') }}" alt="Timekeeper App">
+            <div class="work-info">
+                <h3>Timekeeper App</h3>
+                <span class="work-tag">Web App</span>
+                <p>A simple app for recording and monitoring project hours, inspired by my work at AB Brown Construction.</p>
+            </div>
+        </div>
+        <div class="work-card">
+            <img src="{{ url_for('static', filename='images/sample2.jpg') }}" alt="Volunteer Dashboard">
+            <div class="work-info">
+                <h3>Volunteer Dashboard</h3>
+                <span class="work-tag">UI/UX</span>
+                <p>Dashboard design for tracking volunteer activities and event management.</p>
+            </div>
+        </div>
+    </div> -->
+</section>
+
+<!-- Experience Section -->
+<section class="experience-section">
+    <div class="blob1"></div><div class="blob2"></div>
+    <h2>Experience</h2>
+    <div class="experience-timeline">
+        <div class="experience-item">
+            <div class="exp-icon">⏱️</div>
+            <div class="exp-details">
+                <h3>Timekeeper & Encoder</h3>
+                <span class="exp-place">AB Brown Construction | Bunawan City Project</span>
+                <span class="exp-date">Feb 2021 – Jul 2021</span>
+                <ul>
+                    <li>Recorded employee hours and monitored office hours at the construction site.</li>
+                    <li>Prepared payroll, cash advances, and managed other financial transactions.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="experience-item">
+            <div class="exp-icon">📝</div>
+            <div class="exp-details">
+                <h3>Encoder</h3>
+                <span class="exp-place">AB Brown Construction | Butuan City Project</span>
+                <span class="exp-date">Aug 2021 – Nov 2021</span>
+                <ul>
+                    <li>Maintained and updated records of purchased items.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="experience-item">
+            <div class="exp-icon">🤝</div>
+            <div class="exp-details">
+                <h3>Food Committee & Data Entry Volunteer</h3>
+                <span class="exp-place">Team RCL | Butuan City</span>
+                <span class="exp-date">Mar 2022 – May 2022</span>
+                <ul>
+                    <li>Transferred to the data entry team for campaign data accuracy and confidentiality.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
