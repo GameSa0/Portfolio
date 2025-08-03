@@ -30,62 +30,51 @@
         <div class="feature-card">Custom Prototyping</div>
     </div>
 </section>
-<section class="about-section">
-    <div class="about-text">
-        <h2>Learning, Creating, and Sharing My Journey in Programming & Design</h2>
-        <h3 class="about-subheading">Simple Solutions, Creative Results</h3>
-        <p>Hey, I'm Ian. I'm a person who loves programming and designing websites and apps. I enjoy making things that look nice and are easy for people to use.<br><br>I like learning new things and working on projects that help me get better. If you want to work together or see what I can do, check out my portfolio below!</p>
-    </div>
-</section>
-<section id="portfolio" class="portfolio-section">
-    <div class="portfolio-scroll-section">
-        <h2 class="portfolio-scroll-title">Certificates</h2>
-        <div class="portfolio-horizontal-scroll">
-            <div class="badge-card">
-                <span class="badge-icon">🏅</span>
-                <img src="{{ url_for('static', filename='certificate/cybersecurity.jpg') }}" alt="Certificate 1" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/cybersecurity.jpg') }}" data-title="Certificate 1" data-desc="Brief description for Certificate 1.">
-                <span class="badge-label">Cybersecurity</span>
-            </div>
-            <div class="badge-card">
-                <span class="badge-icon">🏅</span>
-                <img src="{{ url_for('static', filename='certificate/engtech.jpg') }}" alt="On Job Training (OJT)" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/engtech.jpg') }}" data-title="On Job Training (OJT)" data-desc="Brief description for Certificate 2.">
-                <span class="badge-label">On Job Training (OJT)</span>
-            </div>
-            <div class="badge-card">
-                <span class="badge-icon">🏅</span>
-                <img src="{{ url_for('static', filename='certificate/leadership.jpg') }}" alt="Leadership Training Seminar" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/leadership.jpg') }}" data-title="Leadership Training Seminar" data-desc="Brief description for Certificate 2.">
-                <span class="badge-label">Leadership Training Seminar</span>
-            </div>
-            <div class="badge-card">
-                <span class="badge-icon">🏅</span>
-                <img src="{{ url_for('static', filename='certificate/research.jpg') }}" alt="Research Project" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/research.jpg') }}" data-title="Research Project" data-desc="Brief description for Certificate 2.">
-                <span class="badge-label">Student Research Capability Training and Workshop</span>
-            </div>
+
+<!-- Combined About + Portfolio Section -->
+<div class="about-portfolio-combined">
+  <div class="about-text">
+    <h2>Learning, Creating, and Sharing My Journey in Programming & Design</h2>
+    <h3 class="about-subheading">Simple Solutions, Creative Results</h3>
+    <p>Hey, I'm Ian. I'm a person who loves programming and designing websites and apps. I enjoy making things that look nice and are easy for people to use.<br><br>I like learning new things and working on projects that help me get better. If you want to work together or see what I can do, check out my portfolio below!</p>
+  </div>
+  <div class="portfolio-scroll-section">
+    <div class="certificates-container">
+      <h2 class="portfolio-scroll-title">Certificates</h2>
+      <div class="portfolio-horizontal-scroll">
+        <div class="badge-card">
+            <span class="badge-icon">🏅</span>
+            <img src="{{ url_for('static', filename='certificate/cybersecurity.jpg') }}" alt="Certificate 1" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/cybersecurity.jpg') }}" data-title="Cyber Security Sentinel" data-desc="Introduction To Data Security, Social Engeneering, and Malware.">
+            <span class="badge-label">Cybersecurity</span>
         </div>
-        <!-- <h3 class="portfolio-scroll-title">Achievements</h3>
-        <div class="portfolio-horizontal-scroll">
-            <div class="badge-card">
-                <span class="badge-icon">🎖️</span>
-                <img src="{{ url_for('static', filename='images/achievement1.jpg') }}" alt="Achievement 1" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/achievement1.jpg') }}" data-title="Achievement 1" data-desc="Brief description for Achievement 1.">
-                <span class="badge-label">Achievement 1</span>
-            </div>
-            <div class="badge-card">
-                <span class="badge-icon">🎖️</span>
-                <img src="{{ url_for('static', filename='images/achievement2.jpg') }}" alt="Achievement 2" class="modal-img-trigger" data-img="{{ url_for('static', filename='images/achievement2.jpg') }}" data-title="Achievement 2" data-desc="Brief description for Achievement 2.">
-                <span class="badge-label">Achievement 2</span>
-            </div>
-        </div> -->
-    </div>
-    <!-- Modal for image click -->
-    <div id="img-modal" class="modal-overlay modal-celebrate">
-        <div class="modal-content img-modal-content">
-            <span class="modal-close">&times;</span>
-            <img id="img-modal-src" src="" alt="" class="img-modal-img">
-            <h3 id="img-modal-title"></h3>
-            <p id="img-modal-desc"></p>
+        <div class="badge-card">
+            <span class="badge-icon">🏅</span>
+            <img src="{{ url_for('static', filename='certificate/engtech.jpg') }}" alt="On Job Training (OJT)" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/engtech.jpg') }}" data-title="On Job Training (OJT)" data-desc="Completion of OJT in Engetech Global Solutions Inc.">
+            <span class="badge-label">On Job Training (OJT)</span>
         </div>
+        <div class="badge-card">
+            <span class="badge-icon">🏅</span>
+            <img src="{{ url_for('static', filename='certificate/leadership.jpg') }}" alt="Leadership Training Seminar" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/leadership.jpg') }}" data-title="Leadership Training Seminar" data-desc="Traning for Leadership in Essence of Good Leadership, Letter and Corresponding , Professional and Maintaining a Good Public Image and Workplace Integrity and Financial Stewardship.">
+            <span class="badge-label">Leadership Training Seminar</span>
+        </div>
+        <div class="badge-card">
+            <span class="badge-icon">🏅</span>
+            <img src="{{ url_for('static', filename='certificate/research.jpg') }}" alt="Research Project" class="modal-img-trigger" data-img="{{ url_for('static', filename='certificate/research.jpg') }}" data-title="Research Project" data-desc="A Student Research Capbility Training and Workshop.">
+            <span class="badge-label">Student Research Capability Training and Workshop</span>
+        </div>
+      </div>
     </div>
-</section>
+  </div>
+  <!-- Modal for image click -->
+  <div id="img-modal" class="modal-overlay modal-celebrate">
+      <div class="modal-content img-modal-content">
+          <span class="modal-close">&times;</span>
+          <img id="img-modal-src" src="" alt="" class="img-modal-img">
+          <h3 id="img-modal-title"></h3>
+          <p id="img-modal-desc"></p>
+      </div>
+  </div>
+</div>
 
 <!-- Sample Works Section -->
 <section class="works-section">
